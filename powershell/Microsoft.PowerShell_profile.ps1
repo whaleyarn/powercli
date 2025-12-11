@@ -10,7 +10,7 @@ $VM_NAME = {
     Get-VM -Name ${wordToComplete}* | Select-Object -ExpandProperty "Name" | Sort-Object
     }
 Register-ArgumentCompleter -CommandName Pre-UpgradeVM, Post-UpgradeVM, Restore-UpgradeVM -ParameterName Name -ScriptBlock $VM_NAME
-Register-ArgumentCompleter -CommandName Restart-VM, Restart-VMGuest, Start-VM, Stop-VM, Stop-VMGuest -ParameterName VM -ScriptBlock $VM_NAME
+Register-ArgumentCompleter -CommandName Restart-VM, Restart-VMGuest, Remove-VM, Start-VM, Stop-VM, Stop-VMGuest -ParameterName VM -ScriptBlock $VM_NAME
 
 # bash style complete
 Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
